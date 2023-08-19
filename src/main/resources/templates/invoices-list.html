@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoices List</title>
+</head>
+<body>
+<h1>Invoices List</h1>
+<table>
+    <tr>
+        <th>Invoice Number</th>
+        <th>Name</th>
+        <th>NIP</th>
+        <th>Address</th>
+        <th>Postcode</th>
+        <th>City</th>
+        <!-- Add more columns as needed -->
+    </tr>
+    <tbody>
+    <!-- Loop through invoices and display the details -->
+    <th:block th:each="invoice : ${invoices}">
+        <tr>
+            <td th:text="${invoice.number}"></td>
+            <td th:text="${invoice.name}"></td>
+            <td th:text="${invoice.nip}"></td>
+            <td th:text="${invoice.address}"></td>
+            <td th:text="${invoice.postcode}"></td>
+            <td th:text="${invoice.city}"></td>
+            <!-- Add more columns as needed -->
+        </tr>
+    </th:block>
+    </tbody>
+</table>
+</body>
+</html>

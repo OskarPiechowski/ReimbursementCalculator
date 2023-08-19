@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kreator rezerwacji</title>
+</head>
+<body>
+<h1> Zarezerwuj salę konferencyjną</h1>
+<h2><a href="/mainPage">Powrót na stronę główną</a></h2>
+<form action="/api/add" method="post">
+  <label>dodaj rezerwację</label>
+  <input type="text" name="name">
+  <br>
+  <label>Rodzaj zlecenia</label>
+  <label>wynajem</label>
+  <input type="radio" name="rent_type" value="zapłać_z_góry">
+  <label>licytacja</label>
+  <input type="radio" name="rent_type" value="zapłać_pod_koniec_wynajmu">
+  <br>
+  <label>rezerwacja na czas</label>
+  <input type="number" name="time">
+  <br>
+  <button type="submit">Dodaj rezerwację</button>
+</form>
+</body>
+</html>

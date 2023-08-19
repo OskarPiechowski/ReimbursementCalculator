@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>List of additional business trips</title>
+</head>
+<body>
+<h1>List of additional business trips:</h1>
+<ol>
+  <a href="/logout">Logout</a>
+  <form action="/choose-trip" method="post">
+    <li th:each="trips : ${trips}">
+    <input type="radio" name = "choose" th:value =" ${trips.getId()}">
+    <br>
+    <label>Projector Name:</label>
+    <span th:text="${trips.getTripName()}"></span> <br>
+    <label>Amount:</label>
+    <span th:text="${trips.getDistance()}"></span> <br>
+    <label>External number:</label>
+    <span th:text="${trips.getNumberOfDays()}"></span> <br>
+    <label>Price per hour:</label>
+    <span th:text="${trips.getPricePerHour()}"></span> <br>
+    <label>Price per day:</label>
+    <span th:text="${trips.getPricePerDay()}"></span> <br>
+    <hr>
+  </li>
+      <button type="submit">Add</button>
+  </form>
+  <a href="/" >Back to homepage</a>
+</ol>
+</body>
+</html>

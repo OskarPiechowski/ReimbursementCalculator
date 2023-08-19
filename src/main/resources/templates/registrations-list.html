@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>List of registered trip costs: </title>
+</head>
+<body>
+<h1>List of registers:</h1>
+<ol>
+    <li th:each="registration : ${registrations}">
+        <label>Reservation ID:</label>
+        <span th:text="${registrations.id}"></span> <br>
+        <label>Reservation start Date/Time:</label>
+        <span th:text="${registration.startDate}"></span>
+        <span th:text="${registration.startTime}"></span> <br>
+        <label>Registration End Date/Time:</label>
+        <span th:text="${registration.endDate}"></span>
+        <span th:text="${registration.endTime}"></span> <br>
+        <label>Cancelled: </label>
+        <span th:text="${registration.isRegistrationCancelled()}"></span> <br>
+        <hr>
+    </li>
+</ol>
+<a href="/" >Back to homepage</a>
+</body>
+</html>

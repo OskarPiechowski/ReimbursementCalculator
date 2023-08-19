@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Additional business trip</title>
+</head>
+<body>
+<a href="/logout">Logout</a>
+<form action="/add-trip" method="post">
+    <h1>ADDITIONAL BUSINESS TRIP</h1>
+    <label>Trip name:</label>
+    <input type="text" name="trip Name">
+    <br>
+    <label>distance:</label>
+    <input type="number" name="distance">
+    <br>
+    <label>InternalNumber:</label>
+    <input type="number" name="number of days">
+    <br>
+    <label>Price per mileage:</label>
+    <input type="number" name="price">
+    <br>
+    <label>Price per trip:</label>
+    <input type="number" name="all Cost">
+    <h1 th:text="${message}"></h1>
+    <br>
+    <br>
+    <button type="submit">Add</button>
+    <button type="reset">clear form</button>
+</form>
+<a href="/" >Back to homepage</a>
+</body>
+</html>

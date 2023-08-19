@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Insert reservation invoice:
+<form id="invoiceForm" action="/api/invoices/" method="post">
+    <input type="number" id="registrationId" name="registrationId">
+    <button type="submit">Insert invoice</button>
+</form>
+
+<script>
+    document.getElementById("invoiceForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        var registrationId = document.getElementById("registrationIdId").value;
+        var formAction = "/api/invoices/" + registrationId;
+        document.getElementById("invoiceForm").action = formAction;
+
+        this.submit();
+    });
+</script>
+
+</body>
+</html>

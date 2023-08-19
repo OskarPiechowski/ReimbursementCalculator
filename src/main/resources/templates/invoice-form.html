@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Invoice</title>
+</head>
+<body>
+<form action="/invoice/new" method="post">
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="invoice-title">
+        <h2>Invoice</h2>
+        <label class="pull-right">
+          <label>Invoice Number</label>
+          <input type = "text" name = "number"></label>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-xs-6">
+          <address>
+            <strong>Buyer:</strong><br>
+            <div>
+            <label>Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <input type = "text" name = "name">
+            <label>Nip:</label>
+            <input type= "text" name = "nip">
+            </div>
+            <div>
+              <label>Address:&nbsp;&nbsp;</label>
+              <input type = "text" name = "address">
+            </div>
+            <div>
+              <label>Postcode:</label>
+              <input type = "text" name = "postcode">
+              <label>City:</label>
+              <input type= "text" name = "city">
+            </div>
+          </address>
+        </div>
+        <div class="col-xs-6 text-right">
+          <address>
+            <strong>Seller:</strong><br>
+            BusinessTrip S.A<br>
+            ul. Andersa 1<br>
+            95-040 Koluszki <br>
+            Nip: 7775552211<br>
+          </address>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-6">
+          <address>
+            <strong>Payment Method:</strong><br>
+            Visa ending **** 4242<br>
+            rentARoomMate@gmail.com
+          </address>
+        </div>
+        <div class="col-xs-6 text-right">
+          <address>
+            <label>Order Date:</label><br>
+            <input type= "datetime-local" name = "date"><br><br>
+          </address>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title"><strong>Order summary</strong></h3>
+        </div>
+        <div class="panel-body">
+          <div class="table-responsive">
+            <table class="table table-condensed">
+              <thead>
+              <tr>
+                <td><strong>Item</strong></td>
+                <td class="text-center"><strong>Price</strong></td>
+                <td class="text-center"><strong>hours</strong></td>
+                <td class="text-right"><strong>Totals</strong></td>
+              </tr>
+              </thead>
+              <tbody>
+              <!-- foreach ($order->lineItems as $line) or some such thing here -->
+              <tr>
+                <td>short-term rental</td>
+                <td class="text-center">$100</td>
+                <td class="text-center">5</td>
+                <td class="text-right">$600</td>
+              </tr>
+              <tr>
+                <td>accessories</td>
+                <td class="text-center">$10.00</td>
+                <td class="text-center">2</td>
+                <td class="text-right">$20.00</td>
+              </tr>
+              <tr>
+                <td class="no-line"></td>
+                <td class="no-line"></td>
+                <td class="no-line text-center"><strong>Total</strong></td>
+                <td class="no-line text-right">$620</td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button type="submit">submit</button>
+  <button type="reset">clear form</button>
+  <button href="/">Main Page</button>
+</div>
+</form>
+</body>
+</html>
